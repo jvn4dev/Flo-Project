@@ -8,11 +8,16 @@
 import UIKit
 
 class PlayViewController: UIViewController {
+    
+    var musicManager = MusicManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        print("ViewDidLoad")
+        musicManager.performRequest(urlString: musicManager.urlString)
     }
+
 
 
 }
