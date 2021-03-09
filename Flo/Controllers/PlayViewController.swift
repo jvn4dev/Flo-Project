@@ -10,8 +10,10 @@ import AVFoundation
 
 class PlayViewController: UIViewController, MusicManagerDelegate {
     
+    var player: AVPlayer?
     
     var musicManager = MusicManager()
+    var songURL: String?
     
     @IBOutlet weak var musicTitleLabel: UILabel!
     @IBOutlet weak var singerLabel: UILabel!
@@ -30,7 +32,21 @@ class PlayViewController: UIViewController, MusicManagerDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+       
+    }
+    
     func didUpdateMusic(music: MusicModel) {
+        
+        songURL = music.currentFile
+        guard let url = URL(string: songURL ?? "None") else {
+            return
+        }
+        let playerItem: AVPlayerItem = AVPlayerItem(url: url)
+        player = AVPlayer(playerItem: playerItem)
+            
         
         DispatchQueue.main.async {
             self.musicTitleLabel.text = music.currentTitle
@@ -48,13 +64,13 @@ class PlayViewController: UIViewController, MusicManagerDelegate {
         
     }
     @IBAction func playButtonPressed(_ sender: UIButton) {
-        print("play Button Pressed")
+        
+        if player?.rate == 0 {
+            player!.play()
+        } else {
+            player!.pause()
+        }
     }
-    
+
 }
 
-//Mark: - AVAudioPlayerDelegate
-
-extension PlayViewController: AVAudioPlayerDelegate {
-//    var audioPlayer: AVAudioPlayer?
-}
