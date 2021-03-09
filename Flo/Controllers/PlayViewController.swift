@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlayViewController: UIViewController, MusicManagerDelegate {
     
@@ -15,14 +16,17 @@ class PlayViewController: UIViewController, MusicManagerDelegate {
     @IBOutlet weak var musicTitleLabel: UILabel!
     @IBOutlet weak var singerLabel: UILabel!
     @IBOutlet weak var albumImage: UIImageView!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var progressBar: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("ViewDidLoad")
+        
         musicManager.delegate = self
         
         musicManager.performRequest(urlString: musicManager.urlString)
-        
         
     }
     
@@ -41,10 +45,16 @@ class PlayViewController: UIViewController, MusicManagerDelegate {
                 print("Failed to convert url to image \(error)")
             }
         }
-       
         
     }
-    
+    @IBAction func playButtonPressed(_ sender: UIButton) {
+        print("play Button Pressed")
+    }
     
 }
 
+//Mark: - AVAudioPlayerDelegate
+
+extension PlayViewController: AVAudioPlayerDelegate {
+//    var audioPlayer: AVAudioPlayer?
+}
