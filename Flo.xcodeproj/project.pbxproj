@@ -15,6 +15,8 @@
 		32EB16A725F61E5E00CED2D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32EB16A525F61E5E00CED2D7 /* LaunchScreen.storyboard */; };
 		32EB16B525F61F7900CED2D7 /* LyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB16B425F61F7900CED2D7 /* LyricsViewController.swift */; };
 		32EB16B825F6642300CED2D7 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB16B725F6642300CED2D7 /* MusicManager.swift */; };
+		32EB16BF25F7064B00CED2D7 /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB16BE25F7064B00CED2D7 /* MusicData.swift */; };
+		32EB16C625F7137C00CED2D7 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB16C525F7137C00CED2D7 /* MusicModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		32EB16A825F61E5E00CED2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32EB16B425F61F7900CED2D7 /* LyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsViewController.swift; sourceTree = "<group>"; };
 		32EB16B725F6642300CED2D7 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		32EB16BE25F7064B00CED2D7 /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
+		32EB16C525F7137C00CED2D7 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				32EB16B725F6642300CED2D7 /* MusicManager.swift */,
+				32EB16BE25F7064B00CED2D7 /* MusicData.swift */,
+				32EB16C525F7137C00CED2D7 /* MusicModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,8 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				32EB169F25F61E5C00CED2D7 /* PlayViewController.swift in Sources */,
+				32EB16C625F7137C00CED2D7 /* MusicModel.swift in Sources */,
 				32EB169B25F61E5C00CED2D7 /* AppDelegate.swift in Sources */,
 				32EB16B525F61F7900CED2D7 /* LyricsViewController.swift in Sources */,
+				32EB16BF25F7064B00CED2D7 /* MusicData.swift in Sources */,
 				32EB169D25F61E5C00CED2D7 /* SceneDelegate.swift in Sources */,
 				32EB16B825F6642300CED2D7 /* MusicManager.swift in Sources */,
 			);

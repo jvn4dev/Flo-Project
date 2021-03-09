@@ -17,22 +17,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oeY-rP-jWA">
-                                <rect key="frame" x="57" y="119" width="300" height="392"/>
+                                <rect key="frame" x="57" y="119" width="300" height="374"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEW-aT-MI0">
-                                        <rect key="frame" x="117" y="0.0" width="66.5" height="33.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEW-aT-MI0">
+                                        <rect key="frame" x="126" y="0.0" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEX-JX-JXy">
-                                        <rect key="frame" x="124" y="49.5" width="52" height="26.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <rect key="frame" x="131.5" y="40" width="37.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iv4-70-C20">
-                                        <rect key="frame" x="0.0" y="92" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="74" width="300" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="IVA-Ch-bcj"/>
                                             <constraint firstAttribute="width" constant="300" id="vcR-BJ-TPk"/>
@@ -53,6 +53,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="f2Q-DK-Aay"/>
                     <connections>
+                        <outlet property="albumImage" destination="iv4-70-C20" id="Z3q-c6-BF5"/>
+                        <outlet property="musicTitleLabel" destination="XEW-aT-MI0" id="bGd-v2-e3S"/>
+                        <outlet property="singerLabel" destination="pEX-JX-JXy" id="nOy-bY-BD7"/>
                         <segue destination="b7N-QF-2kO" kind="show" identifier="GoToLyrics" id="0aj-ZT-OpF"/>
                     </connections>
                 </viewController>
