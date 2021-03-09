@@ -67,8 +67,13 @@ class PlayViewController: UIViewController, MusicManagerDelegate {
         
         if player?.rate == 0 {
             player!.play()
+            
+            playButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+            
         } else {
             player!.pause()
+            
+            playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
         }
     }
 
